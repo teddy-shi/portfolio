@@ -4,59 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> </title>
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <title>Teddy Shi | Software Engineer Portfolio</title>
 </head>
+
 <body>
-    <header>
-
-    </header>
-    <main id = "maincontent">
-        <div class="timeline">
-            <div class="job-entry">
-                <h2>Amazon</h2>
-                <p>Incoming Software Development Engineer Intern</p>
-                <span>Mar 2025 - Present</span>
-    <       </div>
-            <div class="job-icon">
-                <img src=""/>
-            </div>
-
-            <div class="job-entry">
-                <h2>University of Michigan College of Engineering</h2>
-                <p>Database Management Systems Teaching Assistant</p>
-                <span>Aug 2025 - Jan 2026</span>
-    <       </div>
-            <div class="job-icon">
-                <img src=""/>
-            </div>
-
-            <div class="job-entry">
-                <h2>Capital One</h2>
-                <p>Software Engineer Intern</p>
-                <span>Jun 2025 - Aug 2025</span>
-    <       </div>
-            <div class="job-icon">
-                <img src=""/>
-            </div> 
-
-            <div class="job-entry">
-                <h2>University of Michigan School of Information</h2>
-                <p>Web Development Teaching Assistant</p>
-                <span>Jan 2025 - Aug 2025</span>
-    <       </div>
-            <div class="job-icon">
-                <img src=""/>
-            </div> 
-
-            <div class="job-entry">
-                <h2>Fuyao Group</h2>
-                <p>Software Engineer Intern</p>
-                <span>May 2024 - Aug 2024</span>
-    <       </div>
-            <div class="job-icon">
-                <img src=""/>
-            </div> 
+    <aside class="side-bar">
+        <div class="socials">
+            <a href="" title="Click to contact my Email">EM</a>
+            <a href="https://github.com/teddy-shi/" title="Click to view my GitHub">GH</a>
+            <a href="https://linkedin.com/in/teddyshi/" title="Click to view my LinkedIn">LI</a>
+            <a href="https://www.instagram.com/teddyshiiiiiiii" title="Click to view my Instagram">IG</a>
         </div>
+        <div class="nav-indicator">WORK</div>
+    </aside>
+
+    <main class="scroll-container">
+        <section class="panel hero dark-view" id="home">
+            <div class="site-wrapper">
+                <header><h1 class="brand">Teddy Shi</h1></header>
+                <div class="hero-text">
+                    <h2><strong>Software Engineer</strong></h2>
+                    <h2 class="sub-hero"><strong>Computer Science</strong> and <br> 
+                        <strong>User Experience</strong> at the <br>
+                        <strong>University of Michigan</strong>
+                        <img src="/src/images/michigan_logo.png" alt="UM logo" class="icon-img"/>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel info-section light-view" id="experience">
+            <div class="site-wrapper">
+                <header><h1 class="brand">Experience</h1></header>
+        
+                <div class="experience-grid">
+                    <a href="https://amazon.com" target="_blank" class="card-link">
+                        <div class="card">
+                            <div class="card-meta">
+                                <span class="year-range">[Incoming Summer 2026]</span>
+                                <span class="entry-log">[ SEATTLE, WA ]</span>
+                            </div>
+                            <div class="card-info">
+                                <h3>Software Development Engineer Intern @ Amazon</h3>
+                                <p>Rufus AI | Item-Match Infrastructure</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.capitalone.com/" target="_blank" class="card-link">
+                        <div class="card">
+                            <div class="card-meta">
+                                <span class="year-range">[2025.06 - 2025.08]</span>
+                                <span class="entry-log">[ MCLEAN, VA ]</span>
+                            </div>
+                            <div class="card-info">
+                                <h3>Software Engineer Intern @ Capital One</h3>
+                                <p>Empath | Fraud-Servicing Platform</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.fuyaogroup.com/en/" target="_blank" class="card-link">
+                        <div class="card">
+                            <div class="card-meta">
+                                <span class="year-range">[2024.05 - 2024.08]</span>
+                                <span class="entry-log">[ PLYMOUTH, MI ]</span>
+                            </div>
+                            <div class="card-info">
+                                <h3>Software Engineer Intern @ Fuyao Group</h3>
+                                <p>Supplier Systems Software</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="panel info-section light-view" id="projects">
+            <div class="site-wrapper">
+                <header><h1 class="brand">Projects</h1></header>
+            </div>
+        </section>
+
+        <section class="panel info-section light-view" id="education">
+            <div class="site-wrapper">
+                <header><h1 class="brand">Education</h1></header>
+            </div>
+        </section>
+
+        <section class="panel info-section light-view" id="about">
+            <div class="site-wrapper">
+                <header><h1 class="brand">About</h1></header>
+            </div>
+        </section>
+
+        <nav class="footer-nav">
+            <a href="#home" class="active">Home</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <script src="src/js/background.js" defer></script>
     </main>
 </body>
 </html>
