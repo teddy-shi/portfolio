@@ -36,6 +36,15 @@ body {
     background-color: transparent !important; 
 }
 
+.panel[aria-hidden="true"] {
+    visibility: hidden;
+    transition: visibility 0s 0.8s; 
+}
+
+.panel[aria-hidden="false"] {
+    visibility: visible;
+}
+
 body.light-mode {
     background-color: #ffffff !important;
     color: #000000 !important;
@@ -55,14 +64,22 @@ body.light-mode .footer-nav a {
     opacity: 0.5;
 }
 
-/* 2. Fix the Highlight (Active State) */
+body.light-mode .footer-nav a:hover {
+    opacity: 1 !important;
+    color: #000000 !important;
+    border-bottom: 1px solid #000000 !important;
+}
+
 body.light-mode .footer-nav a.active {
     opacity: 1 !important;
     border-bottom: 2px solid #000000 !important;
     color: #000000 !important;
 }
 
-/* 3. Ensure the Sidebar also behaves */
+body.light-mode .footer-nav a:not(.active) {
+    opacity: 0.75;
+}
+
 body.light-mode .side-bar {
     mix-blend-mode: normal !important;
     color: #000000 !important;
@@ -177,9 +194,6 @@ body.light-mode .brand {
 }
 
 
-
-
-/* Experience Section */
 .experience-grid {
     display: flex;
     flex-direction: column;
@@ -194,12 +208,17 @@ body.light-mode .brand {
 }
 
 .card {
-    background: #ffffff;
+    background-color: rgba(255, 255, 255, 0);
     border: 1px solid #e0e0e0;
     padding: 2.5rem;
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     overflow: hidden;
+
+    transition: 
+        transform 0.3s ease, 
+        background-color 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+        border-color 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 0.3s ease;
 }
 
 .card-meta {
@@ -219,7 +238,7 @@ body.light-mode .brand {
     box-shadow: 0 10px 30px rgba(102, 0, 170, 0.1);
 }
 
-.card h3 {
+.card h1 {
     font-size: 1.5rem;
     margin: 0 0 0.5rem 0;
     font-weight: 700;
@@ -234,4 +253,46 @@ body.light-mode .brand {
 .card.is-visible {
     opacity: 1 !important;
     transform: translateY(0) !important;
+}
+
+
+body {
+    transition: background-color 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                color 0.8s ease-in-out;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    font-family: var(--font-mono);
+    margin: 0;
+    overflow: hidden;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.panel {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; 
+}
+
+#home {
+    background-color: #000000;
+}
+
+.brand, .side-bar, .footer-nav a, .nav-indicator {
+    transition: color 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+body.light-mode .brand,
+body.light-mode .side-bar,
+body.light-mode .footer-nav a,
+body.light-mode .nav-indicator {
+    color: #000000 !important;
+    mix-blend-mode: normal !important; 
 }
