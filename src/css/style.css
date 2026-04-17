@@ -14,7 +14,7 @@
     box-sizing: border-box;
 }
 
-html, body{
+html{
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
@@ -26,6 +26,7 @@ body {
     transition: background-color var(--transition-speed) ease-in-out, 
                 color var(--transition-speed) ease-in-out;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .side-bar {
@@ -253,6 +254,7 @@ footer p:hover {
     height: 100vh;
     overflow-y: auto;
     padding-bottom: 100px; 
+    overflow-x: hidden;
 }
 
 
@@ -292,6 +294,7 @@ body[style*="background-color: rgb(18, 18, 18)"] #about .p3 {
     flex-direction: column;
     align-items: flex-center;
     width: 100%;
+    z-index: 5;
 }
 
 .carousel-3d-scene {
@@ -304,6 +307,8 @@ body[style*="background-color: rgb(18, 18, 18)"] #about .p3 {
     align-items: center;
     justify-content: flex-start; 
     padding-left: 15%;
+    overflow: visible;
+    pointer-events: none;
 }
 
 .carousel-3d-track {
@@ -336,14 +341,15 @@ body[style*="background-color: rgb(18, 18, 18)"] #about .p3 {
     align-items: center;
     justify-content: center;
     gap: clamp(1rem, 10vw, 4rem); 
-    z-index: 100;
     margin-left: 24%;
+    z-index: 9999; /* Nuclear option to get above everything */
+    pointer-events: auto !important;
 }
 
 .carousel-controls button {
     background: none;
     border: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
     outline: none;
     cursor: pointer;

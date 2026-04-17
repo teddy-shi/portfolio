@@ -1,4 +1,4 @@
-@media (max-width: 768px) {
+@media (width < 768px) {
     .carousel-3d-item {
         width: 45%;
         min-width: 200px;
