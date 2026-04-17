@@ -72,7 +72,7 @@ body {
 }
 
 .site-wrapper {
-    width: 65%;
+    width: 70%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -104,25 +104,29 @@ body {
     margin-bottom: 1rem;
 }
 
-.site-wrapper .footer-nav {
+.footer-nav {
     position: fixed;
     bottom: 2rem;
     left: 50%;
     transform: translateX(-50%);
+    width: clamp(300px, 65%, 90vw);
     
-    width: 65%;
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+
+    gap: clamp(0.5rem, 3vw, 2.5rem); 
     z-index: 100;
     
-    padding: 1rem 0;
+    padding: 1rem;
     pointer-events: none;
+    box-sizing: border-box;
 }
 
 .footer-nav a {
     pointer-events: auto;
     text-decoration: none;
+
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
     color: inherit;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -155,7 +159,7 @@ body {
 .card {
     background-color: transparent;
     border: 1px solid #e0e0e0;
-    padding: 2.5rem;
+    padding: clamp(1.5rem, 5vw, 2.5rem);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -163,19 +167,21 @@ body {
 }
 
 .card h1 {
-    font-size: 1.5rem;
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
     margin: 0 0 0.5rem 0;
     font-weight: 700;
 }
 
 .card-meta {
     display: flex;
-    justify-content: space-between;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: clamp(0.4rem, 2vw, 0.9rem);
     letter-spacing: 1px;
     color: #6200ea;
+
+    flex-wrap: wrap;
+    gap: 0.2rem;
 }
 
 .card-info p {
@@ -204,3 +210,4 @@ body[style*="background-color: rgb(18, 18, 18)"] .card-link:hover .card {
     background-color: #1e1430;
     border-color: #9d46ff;
 }
+
