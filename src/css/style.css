@@ -4,7 +4,6 @@
     --text-light: #121212;
     --text-dark: #f4f4f4;
     --transition-speed: 0.7s;
-
     --font-mono: 'Courier Prime', 'IBM Plex Mono', monospace;
 }
 
@@ -23,8 +22,7 @@ body {
     font-family: var(--font-mono);
     background-color: var(--bg-light);
     color: var(--text-light);
-    transition: background-color var(--transition-speed) ease-in-out, 
-                color var(--transition-speed) ease-in-out;
+    transition: background-color var(--transition-speed) ease-in-out, color var(--transition-speed) ease-in-out;
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -95,8 +93,7 @@ body {
     justify-content: center;
     padding: 15vh 10%;
     opacity: 0;
-    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), 
-                transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
     will-change: opacity, transform;
 }
 
@@ -342,8 +339,6 @@ body[style*="background-color: rgb(18, 18, 18)"] #about .p3 {
     justify-content: center;
     gap: clamp(1rem, 10vw, 4rem); 
     margin-left: 24%;
-    z-index: 9999; /* Nuclear option to get above everything */
-    pointer-events: auto !important;
 }
 
 .carousel-controls button {
@@ -368,11 +363,8 @@ body[style*="background-color: rgb(18, 18, 18)"] #about .p3 {
 .carousel-3d-item img {
     width: 100%;
     height: 100%;
-    
     object-fit: cover;
-    
     object-position: center;
-
     transition: all 0.5s ease;
     display: block;
 }
