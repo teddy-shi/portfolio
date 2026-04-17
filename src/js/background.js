@@ -43,6 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.backgroundColor = isDark ? "#121212" : "#f4f4f4";
         document.body.style.color = isDark ? "#f4f4f4" : "#121212";
 
+        const carouselBtns = document.querySelectorAll('.carousel-controls button');
+        carouselBtns.forEach(btn => {
+            btn.style.color = isDark ? "inherit" : "#6200ea";
+        });
+
+        const cardMetas = document.querySelectorAll('.card-meta');
+        cardMetas.forEach(meta => {
+            meta.style.color = isDark ? "inherit" : "#6200ea";
+        });
+
         navLinks.forEach((link) => {
             link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
         });
